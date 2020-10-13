@@ -2257,11 +2257,11 @@ func (s *Server) serveConn(c net.Conn) (err error) {
 				releaseWriter(s, bw)
 				bw = nil
 			}
-			err = c.SetReadDeadline(zeroTime)
+			// err = c.SetReadDeadline(zeroTime)
 			if err != nil {
 				break
 			}
-			err = c.SetWriteDeadline(zeroTime)
+			// err = c.SetWriteDeadline(zeroTime)
 			if err != nil {
 				break
 			}
